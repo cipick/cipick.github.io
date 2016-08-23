@@ -1,0 +1,8 @@
+html, body { margin:0; padding:0; overflow:hidden }
+body {
+  background: #45B8C4;
+}
+#svg-object {
+  margin: auto;
+  display: block;
+}
