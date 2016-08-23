@@ -37,7 +37,7 @@
 		66% {transform: rotate(-10deg);}
 		100% {transform: rotate(0deg);}
 	}
-	@media (min-width: 640px){
+	@media (min-width: 900px){
 		.st24 {
 			<!-- animation: rotate 20s linear infinite; -->
 			transform-origin: top;
