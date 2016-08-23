@@ -1,5 +1,5 @@
 function tilt (x, y) {
-  document.body.scrollLeft = (20 * Math.floor(x));
+  document.body.scrollLeft = (Math.floor(x));
   // document.getElementById('svg-object').style.transform = 'translateX(' + (Math.floor(x)) + 'px)';
 }
 
