@@ -1,6 +1,6 @@
 function tilt (x, y) {
-  alert(x, y);
-  document.getElementById('svg-object').style.transform = 'translateX(' + (-1 * x) + 'px)';
+  document.body.scrollLeft = (20 * Math.floor(x));
+  // document.getElementById('svg-object').style.transform = 'translateX(' + (Math.floor(x)) + 'px)';
 }
 
 if (window.DeviceOrientationEvent) {
