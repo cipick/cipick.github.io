@@ -1,5 +1,5 @@
 function tilt (x, y) {
-  console.log(x, y);
+  alert(x, y);
   document.getElementById('svg-object').style.transform = 'translateX(' + (-1 * x) + 'px)';
 }
 
