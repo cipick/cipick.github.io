@@ -23,40 +23,52 @@
 	}
 	@keyframes shake-left {
 		0% {transform: translatX(0px);}
-		50% {transform: translateX(-50px);}
+		50% {transform: translateX(-20px);}
 		100% {transform: translateY(0)}
 	}
 	@keyframes shake-right {
 		0% {transform: translatX(0px);}
-		50% {transform: translateX(50px);}
+		50% {transform: translateX(20px);}
 		100% {transform: translateY(0)}
 	}
-	#baloon-1 {
-		animation: goup 30s linear infinite;
+	@keyframes rotate {
+		0% {transform: rotate(0deg);}
+		33% {transform: rotate(10deg);}
+		66% {transform: rotate(-10deg);}
+		100% {transform: rotate(0deg);}
 	}
-	#baloon-2 {
-	  animation: goup 28s linear infinite;
-	}
-	#baloon-3 {
-	  animation: goup 17s linear infinite;
-	}
-	#baloon-4 {
-	  animation: goup 12s linear infinite;
-	}
-	#cloud-1 {
-		animation: shake-right 18s linear infinite;
-	}
-	#cloud-2 {
-		animation: shake-left 10s linear infinite;
-	}
-	#clouds-2 {
-		animation: shake-right 28s linear infinite;
-	}
-	#clouds-3 {
-		animation: shake-right 10s linear infinite;
-	}
-	#clouds-4 {
-		animation: shake-left 8s linear infinite;
+	@media (min-width: 640px){
+		.st24 {
+			<!-- animation: rotate 20s linear infinite; -->
+			transform-origin: top;
+		}
+		#baloon-1 {
+			animation: goup 30s linear infinite;
+		}
+		#baloon-2 {
+		  animation: goup 28s linear infinite;
+		}
+		#baloon-3 {
+		  animation: goup 17s linear infinite;
+		}
+		#baloon-4 {
+		  animation: goup 12s linear infinite;
+		}
+		#cloud-1 {
+			animation: shake-right 18s linear infinite;
+		}
+		#cloud-2 {
+			animation: shake-left 10s linear infinite;
+		}
+		#clouds-2 {
+			animation: shake-right 28s linear infinite;
+		}
+		#clouds-3 {
+			animation: shake-right 10s linear infinite;
+		}
+		#clouds-4 {
+			animation: shake-left 8s linear infinite;
+		}
 	}
 
 	.st0{fill:#7C4D25;}
@@ -1119,7 +1131,7 @@ SvV5V5UiVB1+vDIw5Kc1EWxG7PciVMRU5duFEevAgb8xwNxwn9v3ZcczhC3931o3eq7BH34IsOI0
 			</mask>
 			<rect class="st15" width="800" height="800"/>
 		</g>
-		<g class="st24">
+		<g id="sky" class="st24">
 			<polygon class="st26" points="400.188,434 400.261,433.424 400.727,433.425 401.531,432.389 450,0 350,0.19 			"/>
 			<polygon class="st26" points="399.948,437.227 399.752,437.479 350,800 450,800.19 402.056,439.917 			"/>
 			<polygon class="st26" points="400.188,434 400.175,434.106 400.199,434.088 			"/>
@@ -24470,10 +24482,10 @@ BFAAAAAAAAAAAAAAAADAtARQAAAAAAAAAAAAAAAAwLT+E2AAr+DLCV95epYAAAAASUVORK5CYII=" tr
 		<rect x="493" y="517.998" class="st2" width="229.143" height="213.501"/>
 		<text transform="matrix(1 0 0 1 527.8057 528.6475)">
 			<tspan x="0" y="0" class="st51 st7 st37">I'm curently working as </tspan>
-			<tspan x="6.899" y="26" class="st51 st7 st37">freelancer and</tspan>
-			<tspan x="-52.21" y="52" class="st51 st7 st37">full-time front-end developer</tspan>
-			<tspan x="110.38" y="78" class="st51 st7 st37">at <a target="_blank" title="Kuende.com" href="https://kuende.com" class="st51 st7 st37">kuende.com</a>.</tspan>
-			<tspan x="-34.784" y="144" class="st51 st7 st37">Text me: <a href="sms:+40773868505?body=Salut, cipick, te contactez de pe site in legatura cu treaba_aia.">SMS, FB Messager</a></tspan>
+			<tspan x="100" y="30" class="st51 st7 st37">freelancer and</tspan>
+			<tspan x="-52.21" y="60" class="st51 st7 st37">full-time front-end developer</tspan>
+			<tspan x="110.38" y="90" class="st51 st7 st37">at <a target="_blank" title="Kuende.com" href="https://kuende.com" class="st51 st7 st37">kuende.com</a>.</tspan>
+			<tspan x="-34.784" y="150" class="st51 st7 st37">Text me: <a target="_blank" href="sms:+40773868505?body=Salut, cipick, te contactez de pe site in legatura cu treaba_aia.">SMS</a>, <a target="_blank" class="st51 st7 st37" href="https://fb.com/cipick">fb.com/cipick</a></tspan>
 			<!-- <tspan x="-8.759" y="90" class="st51 st7 st37">lobortis nec. Duis a felis velit. </tspan><tspan x="16.155" y="108" class="st51 st7 st37">Nam turpis enim, et vitae.</tspan><tspan x="-20.715" y="144" class="st51 st7 st37"> Cum sociis natoque penatib et </tspan><tspan x="-24.48" y="162" class="st51 st7 st37">magnis dis parturint motes, sed </tspan><tspan x="34.679" y="180" class="st51 st7 st37">nascetur ridiculus mus.</tspan> -->
 		</text>
 	</g>
