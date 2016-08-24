@@ -1,10 +1,18 @@
 $(document).ready(function () {
+  var $body = $('body'),
+      sensitivity = 5;
+
   function tilt (args) {
     document.getElementById('log').innerHTML = args[1];
 
-    scrollLeft = args[1] * 20 + 400;
+    if(args[1] > 0)
+      {scrollLeft = $body.scrollLeft() + sensitivity;}
+    else
+      {scrollLeft = $body.scrollLeft() - sensitivity;}
 
-    $('html, body').animate({
+    console.log(scrollLeft);
+
+    $body.animate({
       scrollLeft: scrollLeft
     }, 200);
   }
