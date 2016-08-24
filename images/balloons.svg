@@ -17,6 +17,7 @@
 <![CDATA[
 	@import 'https://fonts.googleapis.com/css?family=Amatica+SC:700';
 
+	@media only screen and (min-device-width: 800px) {
 	@keyframes goup {
 	    from {transform: translateY(400px);}
 	    to {transform: translateY(-600px);}
@@ -37,6 +38,8 @@
 		66% {transform: rotate(-10deg);}
 		100% {transform: rotate(0deg);}
 	}
+	}
+
 	.st24 {
 		<!-- animation: rotate 20s linear infinite; -->
 		transform-origin: top;
