@@ -3,6 +3,7 @@ body {
   background: #45B8C4;
 }
 #svg-object {
+  display: block;
   margin: auto;
   height: 100%;
 }
