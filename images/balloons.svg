@@ -24484,22 +24484,24 @@ BFAAAAAAAAAAAAAAAADAtARQAAAAAAAAAAAAAAAAwLT+E2AAr+DLCV95epYAAAAASUVORK5CYII=" tr
 		<text transform="matrix(1 0 0 1 160 108)" class="st26 st13 st38 st34">Hi, I'm Cipick!</text>
 		<!-- <text transform="matrix(1 0 0 1 180 110)" class="st26 st13 st38 st34">I love hot air baloons and my dear Beatrice :X</text> -->
 		<rect x="493" y="517.998" class="st2" width="229.143" height="213.501"/>
-		<text transform="matrix(1 0 0 1 527.8057 528.6475)">
+		<text transform="matrix(1 0 0 1 520 540)">
 			<tspan x="0" y="0" class="st51 st7 st37">I'm curently working as </tspan>
 			<tspan x="100" y="30" class="st51 st7 st37">freelancer and</tspan>
 			<tspan x="-52.21" y="60" class="st51 st7 st37">full-time front-end developer</tspan>
 			<tspan x="110.38" y="90" class="st51 st7 st37">at <a target="_blank" title="Kuende.com" href="https://kuende.com" class="st51 st7 st37">kuende.com</a>.</tspan>
-			<tspan x="-34.784" y="150" class="st51 st7 st37">Text me:
+		</text>
+		<text transform="matrix(1 0 0 1 20 470)">
+			<tspan x="0" y="150" class="st51 st7 st37">Text me:
 				<a class="st51 st7 st37" href="mailto:platica.ciprian@gmail.com">mail, </a>
 				<a target="_blank" class="st51 st7 st37 visible-xs" href="sms:+40773868505?body=Ba Cipick, ">SMS, </a>
 				<a target="_blank" class="st51 st7 st37" href="https://m.me/cipick">fb, </a>
 				<a href="skype:ciprian.xlteam?chat" class="st51 st7 st37">skype,</a></tspan>
-			<tspan x="70.759" y="180" class="st51 st7 st37"><a href="tel:+40773868505">call me, maybe</a></tspan>
-			<tspan x="-170" y="210" class="st51 st7 st37">or stalk me:
+			<tspan x="30" y="180" class="st51 st7 st37"><a href="tel:+40773868505">call me, maybe</a></tspan>
+			<tspan x="5" y="210" class="st51 st7 st37">or stalk me:
 				<a target="_blank" class="st51 st7 st37" href="https://github.com/cipick">GitHub, </a>
-				<a target="_blank" class="st51 st7 st37" href="https://fb.com/cipick">fb, </a>
-				<a target="_blank" class="st51 st7 st37" href="https://instagram.com/cipick">instagram, </a>
-				<a target="_blank" class="st51 st7 st37" href="https://plus.google.com/u/0/+CiprianAndreiPlătică">g+</a>
+				<a target="_blank" class="st51 st7 st37" href="https://fb.com/cipick">fb</a>
+				<!-- <a target="_blank" class="st51 st7 st37" href="https://instagram.com/cipick">instagram, </a>
+				<a target="_blank" class="st51 st7 st37" href="https://plus.google.com/u/0/+CiprianAndreiPlătică">g+</a> -->
 			</tspan>
 			<!-- <tspan x="-20.715" y="144" class="st51 st7 st37"> Cum sociis natoque penatib et </tspan><tspan x="-24.48" y="162" class="st51 st7 st37">magnis dis parturint motes, sed </tspan><tspan x="34.679" y="180" class="st51 st7 st37">nascetur ridiculus mus.</tspan> -->
 		</text>

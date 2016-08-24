@@ -2,11 +2,14 @@ $(document).ready(function () {
   function tilt (args) {
     document.getElementById('log').innerHTML = args[1];
 
-    $('html, body').animate({
-      scrollLeft: $('html, body').offset().left - ( $(window).width() - $('html, body').outerWidth(true) ) / 2
-    }, 200);
+    scrollLeft = args[1] * 20 + 400;
 
+    $('html, body').animate({
+      scrollLeft: scrollLeft
+    }, 200);
   }
+
+  window.tilt = tilt;
 
   if (window.DeviceOrientationEvent) {
       window.addEventListener("deviceorientation", function () {
