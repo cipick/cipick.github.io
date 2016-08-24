@@ -4,5 +4,5 @@ body {
 }
 #svg-object {
   margin: auto;
-  display: block;
+  height: 100%;
 }
