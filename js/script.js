@@ -1,6 +1,6 @@
 $(document).ready(function () {
   var $body = $('body'),
-      sensitivity = 1;
+      sensitivity = 10;
 
   function tilt (args) {
 
