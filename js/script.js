@@ -1,8 +1,8 @@
 function tilt (args) {
   // document.body.scrollLeft += Math.floor(args[0]);
-  document.getElementById('log').innerHTML = Math.floor(args[0]);
-  var tiltElement = document.getElementById('baloon-1');
-  tiltElement.style.transform = "rotateX(" + (-Math.floor(args[0])) + "deg) rotateY(" + (-Math.floor(args[1])) + "deg)";
+  document.getElementById('log').innerHTML = Math.floor(args[1]);
+  // var tiltElement = document.getElementById('baloon-1');
+  // tiltElement.style.transform = "rotateX(" + (-Math.floor(args[0])) + "deg) rotateY(" + (-Math.floor(args[1])) + "deg)";
   document.getElementById('svg-object').style.transform = "translateX(" + (Math.floor(args[0] + 300)) + "deg)";
 
   // document.getElementById('svg-object').style.transform = 'translateX(' + (Math.floor(x)) + 'px)';
