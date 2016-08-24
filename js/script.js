@@ -1,9 +1,9 @@
 $(document).ready(function () {
   function tilt (args) {
     document.getElementById('log').innerHTML = args[1];
-    
+
     $('html, body').animate({
-      scrollLeft: $('html, body').offset().left - ( $(window).width() - $('html, body').outerWidth(true) ) / 2 + args[1]
+      scrollLeft: $('html, body').offset().left - ( $(window).width() - $('html, body').outerWidth(true) ) / 2
     }, 200);
 
   }
