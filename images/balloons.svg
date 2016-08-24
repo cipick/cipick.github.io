@@ -37,43 +37,40 @@
 		66% {transform: rotate(-10deg);}
 		100% {transform: rotate(0deg);}
 	}
-	@media (min-width: 900px){
-		.st24 {
-			<!-- animation: rotate 20s linear infinite; -->
-			transform-origin: top;
-		}
-		#baloon-1 {
-			animation: goup 30s linear infinite;
-		}
-		#baloon-2 {
-		  animation: goup 28s linear infinite;
-		}
-		#baloon-3 {
-		  animation: goup 17s linear infinite;
-		}
-		#baloon-4 {
-		  animation: goup 12s linear infinite;
-		}
-		#cloud-1 {
-			animation: shake-right 18s linear infinite;
-		}
-		#cloud-2 {
-			animation: shake-left 10s linear infinite;
-		}
-		#clouds-2 {
-			animation: shake-right 28s linear infinite;
-		}
-		#clouds-3 {
-			animation: shake-right 10s linear infinite;
-		}
-		#clouds-4 {
-			animation: shake-left 8s linear infinite;
-		}
-		.visible-xs {
-			display: none;
-		}
+	.st24 {
+		<!-- animation: rotate 20s linear infinite; -->
+		transform-origin: top;
 	}
-
+	#baloon-1 {
+		animation: goup 30s linear infinite;
+	}
+	#baloon-2 {
+	  animation: goup 28s linear infinite;
+	}
+	#baloon-3 {
+	  animation: goup 17s linear infinite;
+	}
+	#baloon-4 {
+	  animation: goup 12s linear infinite;
+	}
+	#cloud-1 {
+		animation: shake-right 18s linear infinite;
+	}
+	#cloud-2 {
+		animation: shake-left 10s linear infinite;
+	}
+	#clouds-2 {
+		animation: shake-right 28s linear infinite;
+	}
+	#clouds-3 {
+		animation: shake-right 10s linear infinite;
+	}
+	#clouds-4 {
+		animation: shake-left 8s linear infinite;
+	}
+	.visible-xs {
+		display: none;
+	}
 
 	.st0{fill:#7C4D25;}
 	.st1{fill:#E5352D;}
