@@ -9,7 +9,7 @@ body {
 }
 #image {
   display: none;
-  width: 800px;
+  height: 100%;
 }
 @media only screen and (max-width: 800px) {
   #svg-object {
