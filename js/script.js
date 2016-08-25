@@ -15,8 +15,6 @@ $(document).ready(function () {
     }
   }
 
-  window.tilt = tilt;
-
   if (window.DeviceOrientationEvent) {
       window.addEventListener("deviceorientation", function () {
           tilt([event.beta, event.gamma]);
