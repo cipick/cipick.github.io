@@ -1,6 +1,6 @@
 $(document).ready(function () {
   var $body = $('body'),
-      sensitivity = 7;
+      sensitivity = 2;
 
   function tilt (args) {
     var scrollLeft = null;
