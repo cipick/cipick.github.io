@@ -7,3 +7,15 @@ body {
   margin: auto;
   height: 100%;
 }
+#image {
+  display: none;
+  width: 800px;
+}
+@media only screen and (max-width: 800px) {
+  #svg-object {
+    display: none;
+  }
+  #image {
+    display: block;
+  }
+}
