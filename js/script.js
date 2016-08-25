@@ -1,6 +1,7 @@
 $(document).ready(function () {
   var $body = $('body'),
-      sensitivity = 5;
+      sensitivity = 5,
+      scrollLeft = null;
 
   function tilt (args) {
 
@@ -12,10 +13,9 @@ $(document).ready(function () {
     console.log(scrollLeft);
     document.getElementById('log').innerHTML = scrollLeft;
 
-    $body.scrollLeft(scrollLeft);
-    // $body.animate({
-    //   scrollLeft: scrollLeft
-    // }, 200);
+    if(scrollLeft) {
+      $body.scrollLeft(scrollLeft);
+    }
   }
 
   window.tilt = tilt;
