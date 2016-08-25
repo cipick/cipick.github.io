@@ -1,13 +1,13 @@
 $(document).ready(function () {
   var $body = $('body'),
-      sensitivity = 5;
+      sensitivity = 10;
 
   function tilt (args) {
     var scrollLeft = null;
 
-    if(args[1] > 10)
+    if(args[1] > 7)
       {scrollLeft = $body.scrollLeft() - sensitivity;}
-    if(args[1] < -10)
+    if(args[1] < -7)
       {scrollLeft = $body.scrollLeft() + sensitivity;}
 
     console.log(scrollLeft);

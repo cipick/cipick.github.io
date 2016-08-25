@@ -2,6 +2,9 @@ html, body { margin:0; padding:0;}
 body {
   background: #45B8C4;
 }
+* {
+  box-sizing: border-box; 
+}
 #svg-object {
   display: block;
   margin: auto;
