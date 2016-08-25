@@ -6,9 +6,9 @@ $(document).ready(function () {
     var scrollLeft = null;
 
     if(args[1] > 10)
-      {scrollLeft = $body.scrollLeft() + sensitivity;}
-    if(args[1] < -10)
       {scrollLeft = $body.scrollLeft() - sensitivity;}
+    if(args[1] < -10)
+      {scrollLeft = $body.scrollLeft() + sensitivity;}
 
     console.log(scrollLeft);
 
