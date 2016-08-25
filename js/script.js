@@ -1,19 +1,17 @@
 $(document).ready(function () {
-  var $body = $('body'),
+  var $el = document.getElementById('scroll'),
       sensitivity = 2;
 
   function tilt (args) {
     var scrollLeft = null;
 
     if(args[1] > sensitivity)
-      {scrollLeft = $body.scrollLeft() - sensitivity;}
+      {scrollLeft = $el.scrollLeft() - sensitivity;}
     if(args[1] < -sensitivity)
-      {scrollLeft = $body.scrollLeft() + sensitivity;}
-
-    console.log(scrollLeft);
+      {scrollLeft = $el.scrollLeft() + sensitivity;}
 
     if(scrollLeft) {
-      $body.scrollLeft(scrollLeft);
+      $el.scrollLeft(scrollLeft);
     }
   }
 
