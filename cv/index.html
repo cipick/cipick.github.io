@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <style>
+
+      a {
+        color: #999;
+      }
+
+      h4 {
+        margin-bottom: 30px;
+      }
+
+      ul {
+        margin-left: 20px;
+      }
+
+      .card .card-image .card-title {
+        transition: 1s all;
+        width: 100%;
+        font-size: 24px;
+        text-shadow: 4px 5px 5px rgba(150, 150, 150, 1);
+      }
+
+      .card .card-image .card-title:before {
+        content: "";
+        width: 200px;
+        height: 4px;
+        background: rgba(153,153,153,0.9);
+        position: absolute;
+        bottom: 15px;
+        left: 20px;
+      }
+
+      .card .card-image .card-title:hover {
+        background: rgba(153,153,153,0.9);
+      }
+
+      .date {
+        color: #999;
+        font-style: italic;
+        display: block;
+        font-size: 14px;
+        margin-top: 15px;
+        position: relative;
+        margin-bottom: 30px;
+      }
+
+      .date:before {
+        content: "";
+        width: 70px;
+        height: 1px;
+        background: #999;
+        position: absolute;
+        top: -5px;
+        left: 0;
+        right: 0;
+      }
+
+      .carousel .carousel-item {
+        width: 100%;
+      }
+    </style>
+
+    <body>
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m8 offset-m2">
+            <div class="card">
+              <div class="card-image">
+                <img src="images/avatar_400.jpg">
+                <span class="card-title">Hi, I'm Platica Ciprian!</span>
+              </div>
+              <div class="card-content">
+
+                <h4>Education</h4>
+
+                <p>
+                  Bachelor degree in Mathematics and Computer Science
+                  <span class="date">2016</span>
+                </p>
+
+                <p>
+                  Faculty of Mathematics and Computer Science,<br>University of Bucharest, Romania
+                  <span class="date">2012-2015</span>
+                </p>
+
+                <p>
+                  "Mihail Kogalniceanu" High School,<br> Galati, Romania
+                  <span class="date">2008-2012</span>
+                </p>
+
+                <h4>Experience</h4>
+
+                <p>
+                  <b>Kuende</b>
+                  <span>Front-End Developer (Backbone and Marionette written in Coffeescript)</span>
+                  <span class="date">2014-2016</span>
+                </p>
+                <p>
+                  <b>ARI Love</b>
+                  <span>Full-Stack Developer (React and Node.js written in ES6)</span>
+                  <span class="date">2015</span>
+                </p>
+                <p>
+                  <b>XL Team</b>
+                  <span>Full-Stack Developer (CSS, Javascript and Wordpress)</span>
+                  <span class="date">2014</span>
+                </p>
+                <p>
+                  <b>Rainbow Intermed (CSS, Opencart, Wordpress, E-Commerce)</b>
+                  <span class="date">2013</span>
+                </p>
+                <p>
+                  <b>Euroconcept Design(CSS, Opencart, Magento, E-Commerce)</b>
+                  <span class="date">2013</span>
+                </p>
+                <p>
+                  <b>Proseo(CSS, Whitehat and Blackhat SEO, Google Analytics/AdWords, E-Commerce)</b>
+                  <span class="date">2012</span>
+                </p>
+
+                <h4>Skills</h4>
+
+                <p>
+                  <b>JavaScript:</b>
+                  <ul>
+                    <li>
+                      <b>Langs</b>: CoffeeScript (2 years), ES6 (6 months)
+                    </li>
+                    <li>
+                      <b>Frameworks</b>: Backbone.js with Marionette.js (2 years), React.js (6 months)
+                    </li>
+                    <li>
+                      <b>Node.js</b>: Express, Amazon Web Services, Google Cloud Platform
+                    </li>
+                    <li>
+                      <b>Module bundlers</b>: Require.js with Gulp, Webpack
+                    </li>
+                  </ul>
+                </p>
+
+                <p>
+                  <b>CSS:</b>
+                  <ul>
+                    <li><b>Langs:</b> Stylus, Less, Sass</li>
+                    <li><b>Methodologies:</b> BEM, SMACSS, OOCSS, ACSS</li>
+                    <li>CSS Modules</li>
+                  </ul>
+                <p>
+                  <b>HTML:</b>
+                  <ul>
+                    <li><b>Langs:</b> Handlebars, Jade</li>
+                    <li>HTML5</li>
+                  </ul>
+                </p>
+                <p>
+                  <b>PHP</b>
+                  <ul>
+                    <li>WordPress</li>
+                    <li>OpenCart</li>
+                    <li>Magento</li>
+                    <li>MySQL</li>
+                  </ul>
+                </p>
+                <p>
+                  <b>Design:</b>
+                  <ul>
+                    <li>Photoshop</li>
+                    <li>Sketch</li>
+                    <li>Illustrator</li>
+                    <li>Avocode</li>
+                  </ul>
+                </p>
+
+                <h4>Projects</h4>
+
+                <div class="carousel carousel-sliders">
+                   <a class="carousel-item" href="https://kuende.com/"><img src="./images/kuende.png">www.kuende.com</a>
+                   <a class="carousel-item" href="https://www.mssummit.ro/"><img src="./images/mssummit2016.png">www.mssummit.ro</a>
+                   <a class="carousel-item" href="http://futureideas.org/"><img src="./images/futureideas.png">www.futureideas.org</a>
+                   <a class="carousel-item" href="http://2014.mssummit.ro/en"><img src="./images/mssummit2014.png">www.2014.mssummit.ro</a>
+                 </div>
+
+              </div>
+              <!-- <div class="card-action">
+                <a href="mailto:platica.ciprian@gmail.com">Contact</a>
+              </div> -->
+              <div class="fixed-action-btn" style="bottom: 50px; right: 30px;">
+                <a class="btn-floating btn-large red">
+                  <i class="large material-icons" href="mailto:platica.ciprian@gmail.com">email</i>
+                </a>
+                <!-- <ul>
+                  <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+                  <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+                  <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+                  <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+                </ul> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script>
+      $(document).ready(function(){
+        $('.carousel').carousel({full_width: true, indicators: true});
+      });
+      </script>
+    </body>
+  </html>
