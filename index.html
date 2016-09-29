@@ -1,40 +1,319 @@
-<html>
-  <head>
-    <meta name="theme-color" content="#45b8c4">
-    <meta property="og:image" content="https://cipick.eu/images/avatar_400.jpg"/>
-    <meta property="og:title" content="Hi, I'm Cipick!"/>
-    <meta property="og:description" content="I'm curently working as freelancer and full-time front-end developer at www.kuende.com."/>
-    <meta property="og:url" content="https://www.cipick.eu"/>
-    <meta property="og:site_name" content="cipick.eu"/>
-    <meta property="og:type" content="profile"/>
-    <link rel="stylesheet" href="css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  </head>
-</html>
-<body>
-  <object id="svg-object" data="./images/balloons.svg" type="image/svg+xml"></object>
-  <!-- <div style="position:fixed;right:0;bottom:0;left:0;margin:auto;width:800px;height:40px;overflow:hidden;">
-    <div style="position:absolute;top:-262px;left:0px">
-      <iframe width="800" height="300" frameborder="0" src="https://www.youtube.com/embed/HLUX0y4EptA?autoplay=1&theme=light&color=white&amp;rel=0"> </iframe>
-    </div>
-  </div> -->
-  <div id="scroll">
-    <img id="image" src="./images/baloons.jpg" usemap="#image-map" alt="">
-    <map name="image-map" id="image-map">
-      <area  alt="" title="" href="mailto:platica.ciprian@gmail.com" shape="rect" coords="26,1035,286,1122" style="outline:none;" target="_self" onclick="navigator.vibrate(100)"    />
-      <area  alt="" title="" href="http://www.fb.com/cipick" shape="rect" coords="288,1032,365,1125" style="outline:none;" target="_self" onclick="navigator.vibrate(1000)"    />
-    </map>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-  <script src="js/script.js"></script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 
-    ga('create', 'UA-83222406-1', 'auto');
-    ga('send', 'pageview');
+      <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+      <link rel="stylesheet" type="text/css" href="css/demo.css" />
+      <link rel="stylesheet" type="text/css" href="css/component.css" />
 
-  </script>
-</body>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <script>
+      document.documentElement.className = 'js';
+      </script>
+    </head>
+    <style>
+
+      a {
+        color: #999;
+      }
+
+      a:hover {
+        color: #000;
+        text-decoration: underline;
+      }
+
+      h4 {
+        margin-bottom: 30px;
+      }
+
+      ul {
+        margin-left: 20px;
+      }
+
+      .container {
+        color: #333;
+      }
+
+      .segmenter {
+        position: fixed;
+      }
+
+      .card {
+        margin-bottom: 0px!important;
+      }
+
+      .card .card-image .card-title {
+        transition: 1s all;
+        width: 100%;
+        font-size: 24px;
+        text-shadow: 4px 5px 5px rgba(150, 150, 150, 1);
+      }
+
+      .card .card-image .card-title:before {
+        content: "";
+        width: 200px;
+        height: 4px;
+        background: rgba(153,153,153,0.9);
+        position: absolute;
+        bottom: 15px;
+        left: 20px;
+      }
+
+      .card .card-image .card-title:hover {
+        background: rgba(153,153,153,0.9);
+      }
+
+      .date {
+        color: #999;
+        font-style: italic;
+        display: block;
+        font-size: 14px;
+        margin-top: 15px;
+        position: relative;
+        margin-bottom: 30px;
+      }
+
+      .date:before {
+        content: "";
+        width: 70px;
+        height: 1px;
+        background: #999;
+        position: absolute;
+        top: -5px;
+        left: 0;
+        right: 0;
+      }
+
+      .slider {
+        margin-top: -50px;
+      }
+
+      .carousel {
+        padding-bottom: 40%;
+        margin-top: -70px!important;
+      }
+
+      .carousel .carousel-item {
+        width: 100%;
+        cursor: -webkit-grab;
+      }
+
+    </style>
+
+    <body>
+      <div class="segmenter" style="background-image: url(images/bg.jpg)"></div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m8 offset-m2">
+            <div class="card z-depth-5">
+              <div class="card-image">
+                <img src="images/avatar_400.jpg">
+                <span class="card-title">Hi, I'm Platica Ciprian!</span>
+              </div>
+              <div class="card-content">
+
+                <h4>Experience</h4>
+
+                <p>
+                  <b>Kuende</b>
+                  <span>Front-End Developer (Backbone and Marionette written in Coffeescript)</span>
+                  <div><i>Job description:</i> Me and my collegue and mentor, <a href="http://bumbu.me/">Bumbu</a>, had created a single page application with a lot of features:</div>
+                  <ul>
+                    <li>- infinite scroll newsfeed with posts and comments/replies</li>
+                    <li>- notifications</li>
+                    <li>- chat with drag and drop windows</li>
+                    <li>- music player with playlists and queue</li>
+                    <li>- photo gallery and photo browser</li>
+                    <li>- gamification panel</li>
+                    <li>- search friends</li>
+                    <li>- filter newsfeed based on your interests</li>
+                  </ul>
+                  <div>We had used model-view-controller architectural pattern. Backbone helped us out with the models and collections. Marionette is a framework based on Backbone which has views and collection views with very handy life-cycle methods. It also has a router linked to a controller so when a route is matched a method of the controller is executed. For persistence we used a RESTful API and we had to design the structure of the requests and responses. Because we love a clean code without parentheses, braces or semicolons we chose coffeescript and stylus and we had a lot of fun using them. We also had to concatenate all the files in a single file based on dependencies, we used Require.js with Gulp to build and deploy the app. We created a Node.js server with Express for development only so we could test our APIs and the UI with Selenium and Intern.js.</div>
+                  <span class="date">jan 2014 - oct 2016</span>
+                </p>
+                <p>
+                  <b>ARI Love</b>
+                  <span>Full-Stack Developer (React and Node.js written in ES6)</span>
+                  <div><i>Job description:</i> I joined an awesome team and we developed a single page application using React and a backend using Node.js and Amazon Web Services. My work was to rewrite the landing page to be responsive and load faster, i implemented and refactored some components to be responsive. I've done the settings page ui and the backend for it.</div>
+                  <span class="date">feb 2016 - apr 2016</span>
+                </p>
+                <p>
+                  <b>XL Team</b>
+                  <span>Full-Stack Developer (CSS, Javascript and Wordpress)</span>
+                  <div><i>Job description:</i> I worked on several projects in this company. For a project i created a gantt chart with a bunch of features. For the rest of the projects i have build presentation websites with CMS admins written in PHP. I have communicated very well with clients from Netherlands, UK and US.</div>
+                  <span class="date">jun 2014 - jan 2015</span>
+                </p>
+                <p>
+                  <b>Rainbow Intermed</b>
+                  <span>E-Commerce (CSS, Opencart, Wordpress)</span>
+                  <div><i>Job description:</i> I have refactored two online shops and helped the client to increase traffic to his websites.</div>
+                  <span class="date">feb 2014 - jun 2014</span>
+                </p>
+                <p>
+                  <b>Euroconcept Design</b>
+                  <span>E-Commerce (CSS, Opencart, Magento)</span>
+                  <div><i>Job description:</i> I have installed wordpress or a e-commerce platform on a host and customize a theme. The usual were projects for small businesses. I also have done SEO for every project the company mentained.</div>
+                  <span class="date">oct 2013 - jun 2014</span>
+                </p>
+                <p>
+                  <b>Proseo</b>
+                  <span>E-Commerce (CSS, Whitehat and Blackhat SEO, Google Analytics/AdWords)</span>
+                  <div><i>Job description:</i> I have installed wordpress or a e-commerce platform on a host and customize a theme. I created macro-scripts to create backlinks to our websites on some directory platforms so google will improve the search rank of some keywords.</div>
+                  <div class="date">oct 2012 - aug 2013</div>
+                </p>
+
+                <h4>Skills</h4>
+
+                <p>
+                  <b>JavaScript:</b>
+                  <ul>
+                    <li>
+                      <b>Langs</b>: CoffeeScript (2 years), ES6 (6 months)
+                    </li>
+                    <li>
+                      <b>Frameworks</b>: Backbone.js with Marionette.js (2 years), React.js (6 months)
+                    </li>
+                    <li>
+                      <b>Node.js</b>: Express, Amazon Web Services, Google Cloud Platform
+                    </li>
+                    <li>
+                      <b>Module bundlers</b>: Require.js with Gulp, Webpack
+                    </li>
+                  </ul>
+                </p>
+
+                <p>
+                  <b>CSS:</b>
+                  <ul>
+                    <li><b>Langs:</b> Stylus, Less, Sass</li>
+                    <li><b>Frameworks:</b> Bootstrap, Materalize.css </li>
+                    <li><b>Methodologies:</b> BEM, SMACSS, OOCSS, ACSS</li>
+                    <li>CSS Modules</li>
+                  </ul>
+                <p>
+                  <b>HTML:</b>
+                  <ul>
+                    <li><b>Langs:</b> Handlebars, Jade</li>
+                    <li>HTML5</li>
+                  </ul>
+                </p>
+                <p>
+                  <b>PHP</b>
+                  <ul>
+                    <li>WordPress</li>
+                    <li>OpenCart</li>
+                    <li>Magento</li>
+                    <li>MySQL</li>
+                  </ul>
+                </p>
+                <p>
+                  <b>Github</b>
+                </p>
+                <p>
+                  <b>Design:</b>
+                  <ul>
+                    <li>Photoshop</li>
+                    <li>Sketch</li>
+                    <li>Illustrator</li>
+                    <li>Avocode</li>
+                  </ul>
+                </p>
+
+                <h4>Education</h4>
+
+                <p>
+                  Bachelor degree in Mathematics and Computer Science<br>
+                  Faculty of Mathematics and Computer Science,<br>University of Bucharest, Romania
+                  <span class="date">2012-2016</span>
+                </p>
+
+                <p>
+                  "Mihail Kogalniceanu" High School,<br> Galati, Romania
+                  <span class="date">2008-2012</span>
+                </p>
+
+                <h4>Projects</h4>
+                  <div class="date">* swipe the gallery left and right or click to open in another tab</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider">
+        <div class="carousel carousel-slider">
+           <a class="carousel-item" target="_blank" href="https://kuende.com/"><img src="./images/kuende.png">www.kuende.com</a>
+           <a class="carousel-item" target="_blank" href="https://www.mssummit.ro/"><img src="./images/mssummit2016.png">www.mssummit.ro</a>
+           <a class="carousel-item" target="_blank" href="http://futureideas.org/"><img src="./images/futureideas.png">www.futureideas.org</a>
+           <a class="carousel-item" target="_blank" href="http://2014.mssummit.ro/en"><img src="./images/mssummit2014.png">www.2014.mssummit.ro</a>
+         </div>
+      </div>
+
+       <div class="fixed-action-btn" style="bottom: 50px; right: 30px;">
+         <a class="btn-floating btn-large red" href="mailto:platica.ciprian@gmail.com">
+           <i class="large material-icons">email</i>
+         </a>
+         <!-- <ul>
+           <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+           <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+           <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+           <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+         </ul> -->
+       </div>
+
+      <script src="js/anime.min.js"></script>
+  		<script src="js/imagesloaded.pkgd.min.js"></script>
+  		<script src="js/main.js"></script>
+  		<script>
+  		(function() {
+  			var segmenter = new Segmenter(document.querySelector('.segmenter'), {
+  					pieces: 9,
+  					positions: [
+  						{top: 30, left: 5, width: 40, height: 80},
+  						{top: 50, left: 25, width: 30, height: 30},
+  						{top: 5, left: 75, width: 40, height: 20},
+  						{top: 30, left: 45, width: 40, height: 20},
+  						{top: 45, left: 15, width: 50, height: 40},
+  						{top: 10, left: 40, width: 10, height: 20},
+  						{top: 20, left: 50, width: 30, height: 70},
+  						{top: 0, left: 10, width: 50, height: 60},
+  						{top: 70, left: 40, width: 30, height: 30}
+  					],
+  					animation: {
+  						duration: 2000,
+  						easing: 'easeInOutCubic',
+  						delay: 0,
+  						opacity: 1,
+  						translateZ: 85,
+  						translateX: {min: -20, max: 20},
+  						translateY: {min: -20, max: 20}
+  					},
+  					parallax: true,
+  					parallaxMovement: {min: 5, max: 10},
+  					onReady: function() {
+              segmenter.animate();
+  					}
+  				});
+  		})();
+  		</script>
+
+
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script>
+      $(document).ready(function(){
+        $('.carousel').carousel({full_width: true, indicators: true});
+        $('.card').css({marginTop: window.innerHeight - 300});
+        $('body').scrollTop(window.innerHeight - 300);
+      });
+      </script>
+    </body>
+  </html>
