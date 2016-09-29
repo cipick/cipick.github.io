@@ -158,6 +158,24 @@
         border-radius: 2px;
       }
 
+      @media print {
+        body {
+          background: none;
+        }
+
+        .hide-print {
+          display: none;
+        }
+
+        .card-image img {
+          height: 300px;
+        }
+
+        .card-title {
+          margin-left: 20px;
+        }
+      }
+
     </style>
 
     <body>
@@ -292,7 +310,7 @@
       </div>
 
       <div class="slider8">
-        <div class="carousel">
+        <div class="carousel hide-print">
            <div class="carousel-item">
              <img src="./images/kuende.png">
              <a target="_blank" class="z-depth-2" href="https://kuende.com/">www.kuende.com</a>
@@ -312,7 +330,7 @@
          </div>
       </div>
 
-       <div class="fixed-action-btn" style="bottom: 50px; right: 30px;">
+       <div class="fixed-action-btn hide-print" style="bottom: 50px; right: 30px;">
          <a class="btn-floating btn-large red">
            <i class="large material-icons">textsms</i>
          </a>
