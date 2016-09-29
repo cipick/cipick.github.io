@@ -236,10 +236,10 @@
 
       <div class="slider">
         <div class="carousel carousel-slider">
-           <a class="carousel-item" href="https://kuende.com/"><img src="./images/kuende.png">www.kuende.com</a>
-           <a class="carousel-item" href="https://www.mssummit.ro/"><img src="./images/mssummit2016.png">www.mssummit.ro</a>
-           <a class="carousel-item" href="http://futureideas.org/"><img src="./images/futureideas.png">www.futureideas.org</a>
-           <a class="carousel-item" href="http://2014.mssummit.ro/en"><img src="./images/mssummit2014.png">www.2014.mssummit.ro</a>
+           <a class="carousel-item" target="_blank" href="https://kuende.com/"><img src="./images/kuende.png">www.kuende.com</a>
+           <a class="carousel-item" target="_blank" href="https://www.mssummit.ro/"><img src="./images/mssummit2016.png">www.mssummit.ro</a>
+           <a class="carousel-item" target="_blank" href="http://futureideas.org/"><img src="./images/futureideas.png">www.futureideas.org</a>
+           <a class="carousel-item" target="_blank" href="http://2014.mssummit.ro/en"><img src="./images/mssummit2014.png">www.2014.mssummit.ro</a>
          </div>
       </div>
 
@@ -298,6 +298,8 @@
       <script>
       $(document).ready(function(){
         $('.carousel').carousel({full_width: true, indicators: true});
+        $('.card').css({marginTop: window.innerHeight});
+        $('body').scrollTop(window.innerHeight);
       });
       </script>
     </body>
