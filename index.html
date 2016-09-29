@@ -2,7 +2,7 @@
   <html>
     <head>
       <!--Import Google Icon Font-->
-      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 
@@ -257,15 +257,14 @@
       </div>
 
        <div class="fixed-action-btn" style="bottom: 50px; right: 30px;">
-         <a class="btn-floating btn-large red" href="mailto:platica.ciprian@gmail.com">
+         <a class="btn-floating tooltipped btn-large red" href="mailto:platica.ciprian@gmail.com" data-position="left" data-delay="50" data-tooltip="Mail me">
            <i class="large material-icons">email</i>
          </a>
-         <!-- <ul>
-           <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
-           <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-           <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-           <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
-         </ul> -->
+         <ul>
+           <li><a class="btn-floating tooltipped yellow darken-1" onclick="Materialize.toast('I like you too, mate!', 4000)" data-position="left" data-delay="50" data-tooltip="Hey Cipick, i like you dude!"><i class="material-icons">thumb_up</i></a></li>
+           <li><a class="btn-floating tooltipped green" onclick="Materialize.toast('Call me, maybe!', 4000)" data-position="left" data-delay="50" data-tooltip="Call me"><i class="material-icons">call</i></a></li>
+           <li><a class="btn-floating tooltipped blue" onclick="Materialize.toast('Download will be available soon... sorry, try tomorrow :D', 4000)" data-position="left" data-delay="50" data-tooltip="Download resume in pdf"><i class="material-icons">attach_file</i></a></li>
+         </ul>
        </div>
 
       <script src="js/anime.min.js"></script>
@@ -311,6 +310,7 @@
       <script>
       $(document).ready(function(){
         $('.carousel').carousel({full_width: true, indicators: true});
+        $('.tooltipped').tooltip();
         $('.card').css({marginTop: window.innerHeight - 300});
         $('body').scrollTop(window.innerHeight - 300);
       });
