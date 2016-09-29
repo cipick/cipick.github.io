@@ -6,17 +6,21 @@
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 
-      <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+      <!-- <link rel="stylesheet" type="text/css" href="css/normalize.css" />
       <link rel="stylesheet" type="text/css" href="css/demo.css" />
-      <link rel="stylesheet" type="text/css" href="css/component.css" />
+      <link rel="stylesheet" type="text/css" href="css/component.css" /> -->
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <script>
+      <!-- <script>
       document.documentElement.className = 'js';
-      </script>
+      </script> -->
     </head>
     <style>
+
+      body {
+        background: #999;
+      }
 
       a {
         color: #999;
@@ -33,6 +37,10 @@
 
       ul {
         margin-left: 20px;
+      }
+
+      .t-center {
+        text-align: center;
       }
 
       .container {
@@ -89,24 +97,31 @@
         right: 0;
       }
 
-      .slider {
-        margin-top: -50px;
-      }
-
       .carousel {
-        padding-bottom: 40%;
-        margin-top: -70px!important;
+        height: 436px;
       }
 
       .carousel .carousel-item {
-        width: 100%;
+        width: 640px;
+        height: 320px;
         cursor: -webkit-grab;
+      }
+
+      .carousel-item img {
+        padding-top: 120px;
+      }
+
+      .carousel a {
+        color: #F44336 !important;
+        background: white;
+        padding: 5px 10px;
+        border-radius: 2px;
       }
 
     </style>
 
     <body>
-      <div class="segmenter" style="background-image: url(images/bg.jpg)"></div>
+      <!-- <div class="segmenter" style="background-image: url(images/bg.jpg)"></div> -->
 
       <div class="container">
         <div class="row">
@@ -123,7 +138,7 @@
                 <p>
                   <b>Kuende</b>
                   <span>Front-End Developer (Backbone and Marionette written in Coffeescript)</span>
-                  <div><i>Job description:</i> Me and my collegue and mentor, <a href="http://bumbu.me/">Bumbu</a>, had created a single page application with a lot of features:</div>
+                  <div><i>Job description:</i> My team and i created a single page application with a lot of features:</div>
                   <ul>
                     <li>- infinite scroll newsfeed with posts and comments/replies</li>
                     <li>- notifications</li>
@@ -238,8 +253,7 @@
                   <span class="date">2008-2012</span>
                 </p>
 
-                <h4>Projects</h4>
-                  <div class="date">* swipe the gallery left and right or click to open in another tab</div>
+                <h4 class="t-center">Projects</h4>
               </div>
 
             </div>
@@ -247,12 +261,24 @@
         </div>
       </div>
 
-      <div class="slider">
-        <div class="carousel carousel-slider">
-           <a class="carousel-item" target="_blank" href="https://kuende.com/"><img src="./images/kuende.png">www.kuende.com</a>
-           <a class="carousel-item" target="_blank" href="https://www.mssummit.ro/"><img src="./images/mssummit2016.png">www.mssummit.ro</a>
-           <a class="carousel-item" target="_blank" href="http://futureideas.org/"><img src="./images/futureideas.png">www.futureideas.org</a>
-           <a class="carousel-item" target="_blank" href="http://2014.mssummit.ro/en"><img src="./images/mssummit2014.png">www.2014.mssummit.ro</a>
+      <div class="slider8">
+        <div class="carousel">
+           <div class="carousel-item">
+             <img src="./images/kuende.png">
+             <a target="_blank" class="z-depth-2" href="https://kuende.com/">www.kuende.com</a>
+           </div>
+           <div class="carousel-item" >
+             <img src="./images/mssummit2016.png">
+             <a target="_blank" class="z-depth-2" href="https://www.mssummit.ro/">www.mssummit.ro</a>
+           </div>
+           <div class="carousel-item">
+             <img src="./images/futureideas.png">
+             <a target="_blank" class="z-depth-2" href="http://futureideas.org/">www.futureideas.org</a>
+           </div>
+           <div class="carousel-item">
+             <img src="./images/mssummit2014.png">
+             <a target="_blank" class="z-depth-2" href="http://2014.mssummit.ro/en">www.2014.mssummit.ro</a>
+           </div>
          </div>
       </div>
 
@@ -266,11 +292,11 @@
            <li><a class="btn-floating tooltipped blue" onclick="Materialize.toast('Download will be available soon... sorry, try tomorrow :D', 4000)" data-position="left" data-delay="50" data-tooltip="Download resume in pdf"><i class="material-icons">attach_file</i></a></li>
          </ul>
        </div>
-
+<!--
       <script src="js/anime.min.js"></script>
   		<script src="js/imagesloaded.pkgd.min.js"></script>
-  		<script src="js/main.js"></script>
-  		<script>
+  		<script src="js/main.js"></script> -->
+  		<!-- <script>
   		(function() {
   			var segmenter = new Segmenter(document.querySelector('.segmenter'), {
   					pieces: 9,
@@ -301,7 +327,7 @@
   					}
   				});
   		})();
-  		</script>
+  		</script> -->
 
 
       <!--Import jQuery before materialize.js-->
@@ -309,10 +335,10 @@
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script>
       $(document).ready(function(){
-        $('.carousel').carousel({full_width: true, indicators: true});
+        $('.carousel').carousel({indicators: true});
         $('.tooltipped').tooltip();
-        $('.card').css({marginTop: window.innerHeight - 300});
-        $('body').scrollTop(window.innerHeight - 300);
+        // $('.card').css({marginTop: window.innerHeight - 300});
+        // $('body').scrollTop(window.innerHeight - 300);
       });
       </script>
     </body>
