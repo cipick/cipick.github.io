@@ -6,8 +6,15 @@
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 
+      <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+      <link rel="stylesheet" type="text/css" href="css/demo.css" />
+      <link rel="stylesheet" type="text/css" href="css/component.css" />
+
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <script>
+      document.documentElement.className = 'js';
+      </script>
     </head>
     <style>
 
@@ -21,6 +28,18 @@
 
       ul {
         margin-left: 20px;
+      }
+
+      .container {
+        color: #333;
+      }
+
+      .segmenter {
+        position: fixed;
+      }
+
+      .card {
+        margin-bottom: 0px!important;
       }
 
       .card .card-image .card-title {
@@ -44,6 +63,11 @@
         background: rgba(153,153,153,0.9);
       }
 
+      .job-description {
+        margin-top: 10px;
+        font-size: 12px;
+      }
+
       .date {
         color: #999;
         font-style: italic;
@@ -65,12 +89,25 @@
         right: 0;
       }
 
+      .slider {
+        margin-top: -50px;
+      }
+
+      .carousel {
+        padding-bottom: 40%;
+        margin-top: -70px!important;
+      }
+
       .carousel .carousel-item {
         width: 100%;
+        cursor: -webkit-grab;
       }
+
     </style>
 
     <body>
+      <div class="segmenter" style="background-image: url(images/bg.jpg)"></div>
+
       <div class="container">
         <div class="row">
           <div class="col s12 m8 offset-m2">
@@ -81,54 +118,38 @@
               </div>
               <div class="card-content">
 
-                <h4>Education</h4>
-
-                <p>
-                  Bachelor degree in Mathematics and Computer Science
-                  <span class="date">2016</span>
-                </p>
-
-                <p>
-                  Faculty of Mathematics and Computer Science,<br>University of Bucharest, Romania
-                  <span class="date">2012-2015</span>
-                </p>
-
-                <p>
-                  "Mihail Kogalniceanu" High School,<br> Galati, Romania
-                  <span class="date">2008-2012</span>
-                </p>
-
                 <h4>Experience</h4>
 
                 <p>
                   <b>Kuende</b>
                   <span>Front-End Developer (Backbone and Marionette written in Coffeescript)</span>
-                  <span class="date">2014-2016</span>
+                  <span class="date">jan 2014 - oct 2016</span>
                 </p>
                 <p>
                   <b>ARI Love</b>
                   <span>Full-Stack Developer (React and Node.js written in ES6)</span>
-                  <span class="date">2015</span>
+                  <span class="date">feb 2016</span>
                 </p>
                 <p>
                   <b>XL Team</b>
                   <span>Full-Stack Developer (CSS, Javascript and Wordpress)</span>
-                  <span class="date">2014</span>
+                  <span class="date">jun 2014 - jan 2015</span>
                 </p>
                 <p>
                   <b>Rainbow Intermed</b>
                   <span>E-Commerce (CSS, Opencart, Wordpress)</span>
-                  <span class="date">2013</span>
+                  <span class="date">feb 2014 - jun 2014</span>
                 </p>
                 <p>
                   <b>Euroconcept Design</b>
                   <span>E-Commerce (CSS, Opencart, Magento)</span>
-                  <span class="date">2013</span>
+                  <span class="date">oct 2013 - jun 2014</span>
                 </p>
                 <p>
                   <b>Proseo</b>
-                  <span>E-Commerce (CSS, Whitehat and Blackhat SEO, Google Analytics/AdWords)</span>
-                  <span class="date">2012</span>
+                  <div>E-Commerce (CSS, Whitehat and Blackhat SEO, Google Analytics/AdWords)</div>
+                  <!-- <div class="job-description"><b>Job description:</b> I had to install wordpress on a host and customize a theme, the u</div> -->
+                  <div class="date">oct 2012 - aug 2013</div>
                 </p>
 
                 <h4>Skills</h4>
@@ -187,34 +208,89 @@
                   </ul>
                 </p>
 
+                <h4>Education</h4>
+
+                <p>
+                  Bachelor degree in Mathematics and Computer Science
+                  <span class="date">2016</span>
+                </p>
+
+                <p>
+                  Faculty of Mathematics and Computer Science,<br>University of Bucharest, Romania
+                  <span class="date">2012-2015</span>
+                </p>
+
+                <p>
+                  "Mihail Kogalniceanu" High School,<br> Galati, Romania
+                  <span class="date">2008-2012</span>
+                </p>
+
                 <h4>Projects</h4>
-
-                <div class="carousel carousel-sliders">
-                   <a class="carousel-item" href="https://kuende.com/"><img src="./images/kuende.png">www.kuende.com</a>
-                   <a class="carousel-item" href="https://www.mssummit.ro/"><img src="./images/mssummit2016.png">www.mssummit.ro</a>
-                   <a class="carousel-item" href="http://futureideas.org/"><img src="./images/futureideas.png">www.futureideas.org</a>
-                   <a class="carousel-item" href="http://2014.mssummit.ro/en"><img src="./images/mssummit2014.png">www.2014.mssummit.ro</a>
-                 </div>
-
+                  <div class="date">* swipe the gallery left and right or click to open in another tab</div>
               </div>
-              <!-- <div class="card-action">
-                <a href="mailto:platica.ciprian@gmail.com">Contact</a>
-              </div> -->
-              <div class="fixed-action-btn" style="bottom: 50px; right: 30px;">
-                <a class="btn-floating btn-large red" href="mailto:platica.ciprian@gmail.com">
-                  <i class="large material-icons">email</i>
-                </a>
-                <!-- <ul>
-                  <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
-                  <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-                  <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-                  <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
-                </ul> -->
-              </div>
+
             </div>
           </div>
         </div>
       </div>
+
+      <div class="slider">
+        <div class="carousel carousel-slider">
+           <a class="carousel-item" href="https://kuende.com/"><img src="./images/kuende.png">www.kuende.com</a>
+           <a class="carousel-item" href="https://www.mssummit.ro/"><img src="./images/mssummit2016.png">www.mssummit.ro</a>
+           <a class="carousel-item" href="http://futureideas.org/"><img src="./images/futureideas.png">www.futureideas.org</a>
+           <a class="carousel-item" href="http://2014.mssummit.ro/en"><img src="./images/mssummit2014.png">www.2014.mssummit.ro</a>
+         </div>
+      </div>
+
+       <div class="fixed-action-btn" style="bottom: 50px; right: 30px;">
+         <a class="btn-floating btn-large red" href="mailto:platica.ciprian@gmail.com">
+           <i class="large material-icons">email</i>
+         </a>
+         <!-- <ul>
+           <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+           <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+           <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+           <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+         </ul> -->
+       </div>
+
+      <script src="js/anime.min.js"></script>
+  		<script src="js/imagesloaded.pkgd.min.js"></script>
+  		<script src="js/main.js"></script>
+  		<script>
+  		(function() {
+  			var segmenter = new Segmenter(document.querySelector('.segmenter'), {
+  					pieces: 9,
+  					positions: [
+  						{top: 30, left: 5, width: 40, height: 80},
+  						{top: 50, left: 25, width: 30, height: 30},
+  						{top: 5, left: 75, width: 40, height: 20},
+  						{top: 30, left: 45, width: 40, height: 20},
+  						{top: 45, left: 15, width: 50, height: 40},
+  						{top: 10, left: 40, width: 10, height: 20},
+  						{top: 20, left: 50, width: 30, height: 70},
+  						{top: 0, left: 10, width: 50, height: 60},
+  						{top: 70, left: 40, width: 30, height: 30}
+  					],
+  					animation: {
+  						duration: 2000,
+  						easing: 'easeInOutCubic',
+  						delay: 0,
+  						opacity: 1,
+  						translateZ: 85,
+  						translateX: {min: -20, max: 20},
+  						translateY: {min: -20, max: 20}
+  					},
+  					parallax: true,
+  					parallaxMovement: {min: 5, max: 10},
+  					onReady: function() {
+              segmenter.animate();
+  					}
+  				});
+  		})();
+  		</script>
+
 
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
