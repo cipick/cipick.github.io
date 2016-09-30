@@ -350,10 +350,10 @@
            <i class="large material-icons">textsms</i>
          </a>
          <ul>
-           <li><a class="btn-floating tooltipped yellow darken-1" onclick="Materialize.toast('I like you too, mate!', 4000)" data-position="left" data-delay="50" data-tooltip="Hey Cipick, i like you dude!"><i class="material-icons">thumb_up</i></a></li>
-           <li><a href="tel:+44 07491 539 392" class="btn-floating tooltipped green" onclick="Materialize.toast('Call +44 07491 539 392', 4000)" data-position="left" data-delay="50" data-tooltip="Call me"><i class="material-icons">call</i></a></li>
-           <li><a class="btn-floating tooltipped red darken-1" onclick="Materialize.toast('Keep in touch!', 4000)"  href="mailto:platica.ciprian@gmail.com" data-position="left" data-delay="50" data-tooltip="Mail me"><i class="material-icons">mail</i></a></li>
-           <li><a href="./media/platica.ciprian_resume.pdf" download class="btn-floating tooltipped blue" onclick="Materialize.toast('Thank you for downloading!', 4000)" data-position="left" data-delay="50" data-tooltip="Download resume in pdf"><i class="material-icons">attach_file</i></a></li>
+           <li><a class="btn-floating tooltipped yellow darken-1" onclick="Materialize.toast('I like you too, mate!', 4000); ga('send', 'event', 'click', 'like');" data-position="left" data-delay="50" data-tooltip="Hey Cipick, i like you dude!"><i class="material-icons">thumb_up</i></a></li>
+           <li><a href="tel:+44 07491 539 392" class="btn-floating tooltipped green" onclick="Materialize.toast('Call +44 07491 539 392', 4000); ga('send', 'event', 'click', 'tel');" data-position="left" data-delay="50" data-tooltip="Call me"><i class="material-icons">call</i></a></li>
+           <li><a class="btn-floating tooltipped red darken-1" onclick="Materialize.toast('Keep in touch!', 4000); ga('send', 'event', 'click', 'mail');"  href="mailto:platica.ciprian@gmail.com" data-position="left" data-delay="50" data-tooltip="Mail me"><i class="material-icons">mail</i></a></li>
+           <li><a href="./media/platica.ciprian_resume.pdf" download class="btn-floating tooltipped blue" onclick="Materialize.toast('Thank you for downloading!', 4000); ga('send', 'event', 'click', 'download');" data-position="left" data-delay="50" data-tooltip="Download resume in pdf"><i class="material-icons">attach_file</i></a></li>
          </ul>
        </div>
 <!--
