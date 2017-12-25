@@ -3,9 +3,7 @@ title: Ciprian Platica (Front-end Developer), London
 layout: page
 ---
 
-# Ciprian Platica
-## Front-end Developer
-### London
+# Ciprian Platica / Front-end Developer / London
 
 
 
