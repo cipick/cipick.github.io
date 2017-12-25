@@ -3,7 +3,9 @@ title: Ciprian Platica (Front-end Developer), London
 layout: page
 ---
 
-# Ciprian Platica (Front-end Developer), London
+# Ciprian Platica
+## Front-end Developer
+### London
 
 
 
@@ -17,7 +19,7 @@ layout: page
 **feb. 2016 – apr. 2016**
 *București, România*
 
-Front end optimisation for the ARI Love platform, rewriting the homepage codebase to move to a responsive layout and increase the loading time. As a side project I’ve worked on the Settings page UI and backend.
+Front end optimisation for the ARI Love platform, rewriting the homepage codebase to move to a responsive layout and lower the loading time. As a side project I’ve worked on the Settings page UI and backend.
 
 ### Front-End Developer (Backbone and Marionette, Coffeescript) @ Kuende
 **ian. 2015 – sept. 2016**
