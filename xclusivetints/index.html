@@ -1,0 +1,566 @@
+<style media="screen">
+  @import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+
+  body {
+  background: #191a15;
+  color: #2089b0;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  }
+
+  p {
+    font-size: 26px;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+    margin: 0;
+    line-height: 32px;
+    font-size: 26px;
+  }
+
+  .container {
+    max-width: 960px;
+    margin: auto;
+  }
+
+  .header {
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #191a15;
+    z-index: 1600;
+  }
+
+  .logo {
+    display: block;
+    float: left;
+  }
+
+  .tel {
+    display: block;
+    float: right;
+    font-size: 30px;
+    text-decoration: none;
+    color: #2089b0;
+    margin-top: 30px;
+    font-weight: 300;
+  }
+
+  .description {
+    text-transform: uppercase;
+    margin-bottom: 120px;
+    text-align: center;
+  }
+
+  .description li {
+    border-right: 2px solid #fff;
+    display: inline-block;
+    padding: 0 10px;
+  }
+  .description li:last-child {
+    border: none;
+  }
+
+  .pswp {
+    position: relative!important;
+    order: 2;
+  }
+
+  .pswp__bg, .pswp__top-bar, .pswp__button--arrow--left:before, .pswp__button--arrow--right:before {
+    background-color: #191a15!important;
+  }
+
+  @media screen and (min-width: 640px) {
+    .video-wrapper {
+      pointer-events: none;
+    }
+  }
+
+  .pswp__preloader__icn {
+  opacity:0.75;
+  width: 14px;
+  height: 14px;
+  -webkit-animation: clockwise 500ms linear infinite;
+  animation: clockwise 500ms linear infinite;
+  }
+
+  /* The idea of animating inner circle is based on Polymer loading indicator by Keanu Lee https://blog.keanulee.com/2014/10/20/the-tale-of-three-spinners.html */
+  .pswp__preloader__cut {
+  position: relative;
+  width: 7px;
+  height: 14px;
+  overflow: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  }
+
+  .pswp__preloader__donut--fake {
+  box-sizing: border-box;
+
+  width: 14px;
+  height: 14px;
+
+
+  border: 2px solid red;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background: none;
+  margin:0;
+  }
+
+  .pswp__preloader__donut {
+  box-sizing: border-box;
+
+  width: 14px;
+  height: 14px;
+
+
+  border: 2px solid #FFF;
+  border-radius: 50%;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background: none;
+  margin:0;
+
+  -webkit-animation: donut-rotate 1000ms cubic-bezier(.4,0,.22,1) infinite;
+  animation: donut-rotate 1000ms cubic-bezier(.4,0,.22,1) infinite;
+
+  }
+
+
+  @-webkit-keyframes clockwise {
+  0% { -webkit-transform: rotate(0deg) }
+  100% { -webkit-transform: rotate(360deg) }
+  }
+  @keyframes clockwise {
+  0% { transform: rotate(0deg) }
+  100% { transform: rotate(360deg) }
+  }
+  @-webkit-keyframes donut-rotate {
+  0% { -webkit-transform: rotate(0) }
+  50% { -webkit-transform: rotate(-140deg) }
+  100% { -webkit-transform: rotate(0) }
+  }
+  @keyframes donut-rotate {
+  0% { transform: rotate(0) }
+  50% { transform: rotate(-140deg) }
+  100% { transform: rotate(0) }
+  }
+
+</style>
+
+<div class="header">
+  <div class="container">
+    <img src="img/logo.jpg" height="90" class="logo" alt="">
+    <a href="tel:07944444784" class="tel">0794 4444 784</a>
+  </div>
+</div>
+
+<div class="container" style="order: 2">
+  <ul class="description">
+    <li>window tinting</li>
+    <li>car wrapping</li>
+    <li>ecu remap</li>
+    <li>mileage correction</li>
+    <li>xenon lights</li>
+    <li>car audio</li>
+    <li>alloy refurb</li>
+  </ul>
+</div>
+
+<div id="map" style="order: 3"></div>
+<script>
+  function initMap() {
+    // Styles a map in night mode.
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: 40.674, lng: -73.945},
+      zoom: 12,
+      styles: [
+        {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+        {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+        {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+        {
+          featureType: 'administrative.locality',
+          elementType: 'labels.text.fill',
+          stylers: [{color: '#d59563'}]
+        },
+        {
+          featureType: 'poi',
+          elementType: 'labels.text.fill',
+          stylers: [{color: '#d59563'}]
+        },
+        {
+          featureType: 'poi.park',
+          elementType: 'geometry',
+          stylers: [{color: '#263c3f'}]
+        },
+        {
+          featureType: 'poi.park',
+          elementType: 'labels.text.fill',
+          stylers: [{color: '#6b9a76'}]
+        },
+        {
+          featureType: 'road',
+          elementType: 'geometry',
+          stylers: [{color: '#38414e'}]
+        },
+        {
+          featureType: 'road',
+          elementType: 'geometry.stroke',
+          stylers: [{color: '#212a37'}]
+        },
+        {
+          featureType: 'road',
+          elementType: 'labels.text.fill',
+          stylers: [{color: '#9ca5b3'}]
+        },
+        {
+          featureType: 'road.highway',
+          elementType: 'geometry',
+          stylers: [{color: '#746855'}]
+        },
+        {
+          featureType: 'road.highway',
+          elementType: 'geometry.stroke',
+          stylers: [{color: '#1f2835'}]
+        },
+        {
+          featureType: 'road.highway',
+          elementType: 'labels.text.fill',
+          stylers: [{color: '#f3d19c'}]
+        },
+        {
+          featureType: 'transit',
+          elementType: 'geometry',
+          stylers: [{color: '#2f3948'}]
+        },
+        {
+          featureType: 'transit.station',
+          elementType: 'labels.text.fill',
+          stylers: [{color: '#d59563'}]
+        },
+        {
+          featureType: 'water',
+          elementType: 'geometry',
+          stylers: [{color: '#17263c'}]
+        },
+        {
+          featureType: 'water',
+          elementType: 'labels.text.fill',
+          stylers: [{color: '#515c6d'}]
+        },
+        {
+          featureType: 'water',
+          elementType: 'labels.text.stroke',
+          stylers: [{color: '#17263c'}]
+        }
+      ]
+    });
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVbDX1aaqB_VDOF_AuGOnvDBOrabzJA7A&callback=initMap"
+async defer></script>
+
+<!-- Core CSS file -->
+<link rel="stylesheet" href="photoswipe/photoswipe.css">
+
+<!-- Skin CSS file (styling of UI - buttons, caption, etc.)
+     In the folder of skin CSS file there are also:
+     - .png and .svg icons sprite,
+     - preloader.gif (for browsers that do not support CSS animations) -->
+<link rel="stylesheet" href="photoswipe/default-skin/default-skin.css">
+
+<!-- Core JS file -->
+<script src="photoswipe/photoswipe.min.js"></script>
+
+<!-- UI JS file -->
+<script src="photoswipe/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true" style="order: 1">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script type="text/javascript">
+  var pswpElement = document.querySelectorAll('.pswp')[0];
+
+  // build items array
+  var items = [
+    {
+      html: '<div class="wrapper"><div class="video-wrapper"><iframe class="pswp__video" src="https://player.vimeo.com/video/4166716?autoplay=1&loop=1&autopause=0&zoom=10" style="border: 0; width: 100%; height: 100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>',
+      w: 960,
+      h: 720
+    },
+    {
+        src: 'img/12115900_418412234950005_6621874139821328715_n.jpg',
+        w: 960,
+        h: 720
+    },
+    {
+        src: 'img/23878_242053442585886_1679537555_n.jpg',
+        w: 960,
+        h: 720
+    },
+    {
+        src: 'img/1016972_242053385919225_1970224655_n.jpg',
+        w: 960,
+        h: 720
+    },
+    {
+        src: 'img/1459731_266129380178292_1613838388_n.jpg',
+        w: 960,
+        h: 720
+    },
+    {
+        src: 'img/1510349_287568511367712_1891324137_n.jpg',
+        w: 960,
+        h: 720
+    },
+    {
+        src: 'img/1966824_287568858034344_1938346703_n.jpg',
+        w: 960,
+        h: 720
+    },
+    {
+        src: 'img/10150661_287568694701027_1519170823_n.jpg',
+        w: 960,
+        h: 720
+    },
+    {
+        src: 'img/10626669_321488574642372_8253874641095841513_n.jpg',
+        w: 960,
+        h: 720
+    },
+    {
+        src: 'img/10155161_287570764700820_120483997_n.jpg',
+        w: 960,
+        h: 720
+    },
+    {
+        src: 'img/10473434_314840328640530_5502313091600566819_n.jpg',
+        w: 960,
+        h: 720
+    }
+  ];
+
+  var openPhotoSwipe = function() {
+    var pswpElement = document.querySelectorAll('.pswp')[0];
+
+    // define options (if needed)
+    var options = {
+      modal: false,
+      // Size of top & bottom bars in pixels,
+      // "bottom" parameter can be 'auto' (will calculate height of caption)
+      // option applies only when mouse is used,
+      // or width of screen is more than 1200px
+      //
+      // (Also refer to `parseVerticalMargin` event)
+      barsSize: {top:110, bottom:'auto'},
+
+      // Adds class pswp__ui--idle to pswp__ui element when mouse isn't moving for 4000ms
+      timeToIdle: 4000,
+
+      // Same as above, but this timer applies when mouse leaves the window
+      timeToIdleOutside: 1000,
+
+      // Delay until loading indicator is displayed
+      loadingIndicatorDelay: 1000,
+
+      // Function builds caption markup
+      addCaptionHTMLFn: function(item, captionEl, isFake) {
+         // item      - slide object
+         // captionEl - caption DOM element
+         // isFake    - true when content is added to fake caption container
+         //             (used to get size of next or previous caption)
+
+         if(!item.title) {
+             captionEl.children[0].innerHTML = '';
+             return false;
+         }
+         captionEl.children[0].innerHTML = item.title;
+         return true;
+      },
+
+      // Buttons/elements
+      closeEl: false,
+      captionEl: true,
+      fullscreenEl: false,
+      zoomEl: false,
+      shareEl: false,
+      counterEl: true,
+      arrowEl: true,
+      preloaderEl: true,
+      closeOnScroll: false,
+      zoomEl: false,
+      maxSpreadZoom: 1,
+      getDoubleTapZoom: function(isMouseClick, item) {
+        return item.initialZoomLevel;
+      },
+      pinchToClose: false,
+
+      // Tap on sliding area should close gallery
+      tapToClose: false,
+
+      // Tap should toggle visibility of controls
+      tapToToggleControls: false,
+
+      // Mouse click on image should close the gallery,
+      // only when image is smaller than size of the viewport
+      clickToCloseNonZoomable: false,
+
+      // Element classes click on which should close the PhotoSwipe.
+      // In HTML markup, class should always start with "pswp__", e.g.: "pswp__item", "pswp__caption".
+      //
+      // "pswp__ui--over-close" class will be added to root element of UI when mouse is over one of these elements
+      // By default it's used to highlight the close button.
+      closeElClasses: ['item', 'caption', 'zoom-wrap', 'ui', 'top-bar'],
+
+      // Separator for "1 of X" counter
+      indexIndicatorSep: ' / ',
+
+
+
+      // Share buttons
+      //
+      // Available variables for URL:
+      // {{url}}             - url to current page
+      // {{text}}            - title
+      // {{image_url}}       - encoded image url
+      // {{raw_image_url}}   - raw image url
+      shareButtons: [
+         {id:'facebook', label:'Share on Facebook', url:'https://www.facebook.com/sharer/sharer.php?u={{url}}'},
+         {id:'twitter', label:'Tweet', url:'https://twitter.com/intent/tweet?text={{text}}&url={{url}}'},
+         {id:'pinterest', label:'Pin it', url:'http://www.pinterest.com/pin/create/button/?url={{url}}&media={{image_url}}&description={{text}}'},
+         {id:'download', label:'Download image', url:'{{raw_image_url}}', download:true}
+      ],
+
+
+      // Next 3 functions return data for share links
+      //
+      // functions are triggered after click on button that opens share modal,
+      // which means that data should be about current (active) slide
+      getImageURLForShare: function( shareButtonData ) {
+         // `shareButtonData` - object from shareButtons array
+         //
+         // `pswp` is the gallery instance object,
+         // you should define it by yourself
+         //
+         return pswp.currItem.src || '';
+      },
+      getPageURLForShare: function( shareButtonData ) {
+         return window.location.href;
+      },
+      getTextForShare: function( shareButtonData ) {
+         return pswp.currItem.title || '';
+      },
+
+      // Parse output of share links
+      parseShareButtonOut: function(shareButtonData, shareButtonOut) {
+         // `shareButtonData` - object from shareButtons array
+         // `shareButtonOut` - raw string of share link element
+         return shareButtonOut;
+      }
+    };
+
+    // Initializes and opens PhotoSwipe
+    var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+    gallery.init();
+
+    function preventDefault(e) {
+      e = e || window.event;
+      if (e.preventDefault)
+          e.preventDefault();
+      e.returnValue = false;
+    }
+    pswpElement.removeEventListener('DOMMouseScroll', preventDefault, false);
+  }
+
+  openPhotoSwipe();
+</script>
