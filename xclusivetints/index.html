@@ -57,7 +57,7 @@
 
   .description {
     text-transform: uppercase;
-    margin-bottom: 120px;
+    margin: 80px 0;
     text-align: center;
   }
 
@@ -193,13 +193,13 @@
   </ul>
 </div>
 
-<div id="map" style="order: 3; heigh: 720px"></div>
+<div id="map" style="order: 3; height: 720px"></div>
 <script>
   function initMap() {
     // Styles a map in night mode.
     var map = new google.maps.Map(document.getElementById('map'), {
       center: {lat: 51.5398022, lng: -0.0919913},
-      zoom: 12,
+      zoom: 18,
       styles: [
         {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
         {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
