@@ -176,7 +176,7 @@
 
 <div class="header">
   <div class="container">
-    <img src="img/logo.jpg" height="90" class="logo" alt="">
+    <a href="" class="logo"><img src="img/logo.jpg" height="90"  alt=""></a>
     <a href="tel:07944444784" class="tel">0794 4444 784</a>
   </div>
 </div>
@@ -196,10 +196,62 @@
 <div id="map" style="order: 3; height: 720px"></div>
 <script>
   function initMap() {
+    function detectBrowser() {
+      var useragent = navigator.userAgent;
+      var mapdiv = document.getElementById("map");
+      if (useragent.indexOf('iPhone') != -1 || useragent.indexOf('Android') != -1) {
+        mapdiv.style.width = '100%';
+        mapdiv.style.height = '100%';
+      } else {
+        mapdiv.style.width = '600px';
+        mapdiv.style.height = '800px';
+      }
+    }
+
+    var myLatLng;
+    var latit;
+    var longit;
+
+    function geoSuccess(position) {
+        var latitude = position.coords.latitude;
+        var longitude = position.coords.longitude;
+        var directionsService = new google.maps.DirectionsService;
+        var directionsDisplay = new google.maps.DirectionsRenderer;
+        myLatLng = {
+            lat: latitude,
+            lng: longitude
+        };
+        var mapProp = {
+            //            center: new google.maps.LatLng(latitude, longitude), // puts your current location at the centre of the map,
+            zoom: 15,
+            mapTypeId: 'roadmap',
+        };
+        var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+        var directionsService = new google.maps.DirectionsService;
+        var directionsDisplay = new google.maps.DirectionsRenderer;
+        //call renderer to display directions
+        directionsDisplay.setMap(map);
+    }
+
+    function geoError() {
+      alert("Geocoder failed.");
+    }
+
+    function getLocation() {
+      if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
+          // alert("Geolocation is supported by this browser.");
+      } else {
+          alert("Geolocation is not supported by this browser.");
+      }
+    }
+
+    var shop = new google.maps.LatLng(51.55324, 0.025243);
+
     // Styles a map in night mode.
     var map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: 51.5529446, lng: 0.0179393},
-      zoom: 15,
+      center: shop,
+      zoom: 18,
       styles: [
         {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
         {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
@@ -280,6 +332,17 @@
           stylers: [{color: '#17263c'}]
         }
       ]
+    });
+
+    var image = {
+      url: 'img/logo-small.jpg',
+      scale: 0.4
+    };
+
+    var shopMarker = new google.maps.Marker({
+      position: map.getCenter(),
+      map: map,
+      icon: image
     });
   }
 </script>
