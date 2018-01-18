@@ -78,8 +78,22 @@
     border: none;
   }
 
-  .mobile {
-    fill: red;
+
+
+  @media screen and (max-width: 640px){
+    .mobile {
+      display: none;
+    }
+
+    .description {
+      border: none;
+    }
+  }
+
+  @media screen and (max-width: 640px){
+    .description li {
+      border: none;
+    }
   }
 
   .gm-style-iw img {
@@ -193,9 +207,9 @@
 <div class="header">
   <div class="container">
     <a href="" class="logo"><img src="img/logo-small.jpg" height="100"  alt=""></a>
-    <a style="display: block; float:right;" href="tel:07944444784" class="tel">
+    <a style="display: block; float:right; line-height: 70px;" href="tel:07944444784" class="tel">
       <span style="vertical-align: middle">0794 4444 784</span>
-      <img height="80" style="vertical-align: middle" src="img/device.svg" class="mobisle"/>
+      <img height="80" style="vertical-align: middle" src="img/device.svg" class="mobile"/>
     </a>
   </div>
 </div>
